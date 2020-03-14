@@ -24,67 +24,95 @@ device = XBeeDevice("/dev/ttymxc4" , 115200)
 #    NO - Network Discovery Options
 #    CI - Cluster ID
 
-ATCommandsXbee = ["CM" , "ID" , "MT" , "BR" , "PL" , "RR" , "CE" , "BH" , "NH" , "MR" , "SH" , "SL" , "NI" , "NT" , "NO" , "CI"]
-
 xbeeConfig = {
 	"CM" : {
 		"Description" : "Channel Mask" , 
-		"Value" : 0
+		"Value" : 0 ,
+		"Editable" : True ,
+		"Type" : "HEX"
 	} , 
 	"ID" : {
 		"Description" : "Network ID" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : True , 
+		"Type" : "HEX"
 	} , 
 	"BR" : {
 		"Description" : "RF Data Rates" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : True , 
+		"Type" : "HEX"
 	} , 
 	"PL" : {
 		"Description" : "TX Power level" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : True , 
+		"Type" : "HEX"
 	} , 
 	"RR" : {
 		"Description" : "Unicast Retries" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : True , 
+		"Type" : "HEX"
 	} , 
 	"CE" : {
 		"Description" : "Routing/Messaging Modes" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : True , 
+		"Type" : "HEX"
 	} , 
 	"BH" : {
 		"Description" : "Broadcast Hops" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : True , 
+		"Type" : "HEX"
 	} , 
 	"NH" : {
 		"Description" : "Network Hops" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : True , 
+		"Type" : "HEX"
 	} , 
 	"MR" : {
 		"Description" : "Mesh Unicast Reties" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : True , 
+		"Type" : "HEX"
 	} , 
 	"SH" : {
 		"Description" : "Serial Number High" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : False , 
+		"Type" : "HEX"
 	} , 
 	"SL" : {
 		"Description" : "Serial Number Low" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : False , 
+		"Type" : "HEX"
 	} , 
 	"NI" : {
 		"Description" : "Node Identifier" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : True , 
+		"Type" : "STRING"
 	} , 
 	"NT" : {
 		"Description" : "Network Discovery Backoff" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : True , 
+		"Type" : "HEX"
 	} , 
 	"NO" : {
 		"Description" : "Network Discovery Options" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : True , 
+		"Type" : "HEX"
 	} , 
-	"NI" : {
+	"CI" : {
 		"Description" : "Cluster ID" , 
-		"Value" : 0
+		"Value" : 0 , 
+		"Editable" : True , 
+		"Type" : "HEX"
 	} , 
 }
