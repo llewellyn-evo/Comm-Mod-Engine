@@ -1,0 +1,23 @@
+{
+	"logging" : {
+		"level": 30 ,
+		"logFile" : "log.txt" 
+	} ,
+	"xbee" : {
+		"tcpPort" : 9000 ,
+		"baudRate" : 115200 ,
+		"serialPort" : "/dev/ttyUSB0"
+	} ,
+	"gps" : {
+		"type" : "UBLOX",
+		"tcpPort" : 9001 , 
+		"BaudRate" : 115200 ,
+		"serialPort" : "/dev/ttymxc1"
+	} ,
+	"system" : {
+		"tcpPort" : 9002 , 
+		"ntpserver" : 1 ,
+		"IMU" : 1 ,
+		"IMURate" : 10 
+	}
+}
