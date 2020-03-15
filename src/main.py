@@ -15,6 +15,11 @@ import json
 import threading
 #import for xbee function
 from xbeeHandler import xbeeProcess
+#inport for flask
+from flask_api import status 
+import flask
+from flask import render_template
+
 
 def read_config():
 	config = default
@@ -95,6 +100,19 @@ def main():
 		# output error, and return with an error code
 		print (str(err))
 		sys.exit(2)
+
+
+#api call to get the configuration of the system
+@app.route('/systemConfig' , methods = ["GET" , "POST"])
+def systemConfigApi():
+	if flask.request.method == "GET":
+		return module , status.HTTP_200_OK
+
+
+#render static html files
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 
 

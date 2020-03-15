@@ -1,5 +1,7 @@
 import threading 
 from flask import Flask
+#import to fix CORS error
+from flask_cors import CORS
 
 #Comm Module Default config
 default = {
@@ -18,16 +20,20 @@ default = {
 		'logFile' : '/var/log/Module' 
 	},
 	"xbee" : {
+		"type" : "SX 868",
 		"tcpPort" : 9000 ,
 		"baudRate" : 115200 ,
-		"serialPort" : "/dev/ttymxc4"
+		"serialPort" : "/dev/ttyUSB0"
 	} ,
 	"gps" : {
-		"type" : "UBLOX",
+		"type" : "UBLOX M8N",
 		"tcpPort" : 9001 , 
 		"BaudRate" : 115200 ,
 		"serialPort" : "/dev/ttymxc1"
 	} ,
+	"wifi" : {
+		"type" : "EmbedAir100",
+	},
 	"system" : {
 		"tcpPort" : 9002 , 
 		"ntpserver" : 1 ,
@@ -56,3 +62,4 @@ xbeeThread = threading.Thread()
 
 #Variables for REST API Server
 app = Flask(__name__)
+CORS(app)

@@ -29,7 +29,7 @@ def Command(operation , addr , data):
 	try:
 		#Read Configs from Device
 		if operation == 1:
-			#loop through all the AT Commands
+			#loop through all the AT Command
 			commands = xbeeConfig.keys()
 			#Iterate through keys in json 
 			for key in commands:
@@ -112,7 +112,7 @@ def xbeeProcess(module , exitEvent ):
 
 
 @app.route('/xbeeConfig' , methods = ["GET" , "POST"])
-def index():
+def xbeeConfigApi():
 	if flask.request.method == "GET":
 		resp = Command(1 , None  , None)
 		if resp == 1:

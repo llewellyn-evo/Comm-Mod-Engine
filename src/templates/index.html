@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Communication Module</title>
+</head>
+<link rel="stylesheet" type="text/css" href="static/css/index.css">
+<body>
+	<div class="Title">
+  		<h1 style="color: black"> <img src="static/resources/logo.png" style="width:150px;height:150px;margin-left:15px;"> Communication Module</h1>
+  		<hr>
+  	</div>
+
+  	<button hidden class="tablink" onclick="openPage('SYSTEM', this, 'grey')" id="SYSTEMTAB" >SYSTEM</button>
+	<button hidden class="tablink" onclick="openPage('WIFI', this, 'grey')" id="WIFITAB" >WIFI</button>
+	<button hidden class="tablink" id="RFTAB">RF</button>
+	<button hidden class="tablink" onclick="openPage('GPS', this, 'grey')" id="GPSTAB">GPS</button>
+
+
+<div id="SYSTEM" class="tabcontent">
+  <h3>SYSTEM</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="WIFI" class="tabcontent">
+  <h3>WIFI</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="RF" class="tabcontent">
+  <h3>RF</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="GPS" class="tabcontent">
+  <h3>GPS</h3>
+  <p>Who we are and what we do.</p>
+</div>
+</body>
+
+<script src="static/js/jquery-3.4.1.js"></script>
+<script src="static/js/main.js"></script>
+
+</html>
